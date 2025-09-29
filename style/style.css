@@ -3,3 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.marquee_header {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: snow;
+  color: grey;
+  padding: 10px 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.marquee_inner {
+  font-size: 13px;
+  letter-spacing: 3px;
+  display: inline-block;
+  padding-right: 50%;
+}
