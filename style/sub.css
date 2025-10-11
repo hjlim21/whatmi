@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  cursor: cell;
+  -webkit-font-smoothing: antialiased;
+}
+.marquee_header {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  position: relative;
+}
+
+.marquee_inner {
+  display: flex;
+  width: max-content;
+  font-size: 13px;
+  letter-spacing: 3px;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee_inner span {
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+#a {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100vw;
+  border-bottom: 4px solid limegreen;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: 'concern';
+  font-style: normal;
+  text-align: right;
+  line-height: 0.8em;
+  padding-right: 5px;
+}
+
+h2 {
+  font-size: 1.1em;
+  line-height: 1.25em;
+  font-family: 'concern';
+  font-style: normal;
+  padding: 5px 5px 0 0;
+  display: block;
+}
