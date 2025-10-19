@@ -9,6 +9,28 @@ body {
   font-size: 13px;
 }
 
+h1 {
+  font-size: 30px;
+  writing-mode: vertical-rl;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  letter-spacing: 4px;
+  text-align: top;
+  line-height: 1.5;
+  margin: 50px auto 30px;
+  padding: 20px;
+  border-left: 1.5px solid black;
+  border-right: 1.5px solid black;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+  margin: 50px 0 50px;
+}
+
 .marquee_header {
   width: 100%;
   overflow: hidden;
