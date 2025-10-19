@@ -7,9 +7,11 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="scroll-bar"></div>
+
     <h1>
       <a href="#top">
-        <span class="">파우치지도</span>
+        <span class="mtop">파우치지도</span>
         <span></span>
       </a>
     </h1>
@@ -28,5 +30,14 @@
     <ul>
       <li><input type="checkbox" id="" checked />"햐"</li>
     </ul>
+    <script>
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+      });
+    </script>
   </body>
 </html>
