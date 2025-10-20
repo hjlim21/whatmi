@@ -4,15 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
-    <title>Document</title>
+    <title>요즘 뭐 들고 다니니?</title>
   </head>
   <body>
     <header class="marquee_header">
       <div class="marquee_inner">
-        안녕하세요 예시문장입니다. 오늘의 파우치는 돼병 파우치 마딛게
-        먹겟듭니다.. 내일의 파우치도 기대해주세요.. 안녕하세요 예시문장입니다.
-        오늘의 파우띠는 키티버니포니의 버니파우치 마딛게 먹겟듭니다.. 내일의
-        파우치도 기대해주세요.. 안녕하세요 예시문장입니다. 오늘의 파우치는
+        ♥ 사이버 파우치 소개타임 ㉽ 내용물은 언제든 바뀔 수 있습니다 ♥ 사이버
+        파우치 소개타임 ㉽ 내용물은 언제든 바뀔 수 있습니다 ♥ 사이버 파우치
+        소개타임 ㉽ 내용물은 언제든 바뀔 수 있습니다 ♥ 사이버 파우치 소개타임 ㉽
+        내용물은 언제든 바뀔 수 있습니다 ♥ 사이버 파우치 소개타임 ㉽ 내용물은
+        언제든 바뀔 수 있습니다 ♥ 사이버 파우치 소개타임 ㉽ 내용물은 언제든 바뀔
+        수 있습니다 ♥ 사이버 파우치 소개타임 ㉽ 내용물은 언제든 바뀔 수 있습니다
+        ♥ 사이버 파우치 소개타임 ㉽ 내용물은 언제든 바뀔 수 있습니다 ♥ 사이버
+        파우치 소개타임 ㉽ 내용물은 언제든 바뀔 수 있습니다 ♥ 사이버 파우치
+        소개타임 ㉽ 내용물은 언제든 바뀔 수 있습니다
       </div>
     </header>
 
@@ -23,19 +28,14 @@
       정리를 해놓곤 합니다. <br />제가 가지고 다니는 파우치 속 필수템들과 별로
       안궁금하실 TMI들까지 소개해드릴게요.
     </h2>
-    <!-- <section class="info">
-      <details open>
-        <summary class="info_button">ℹ︎</summary>
-        <h4>요즘 뭐 들고 다니니?</h4>
-        <br />혹시 바리바리스타를 아시나요..? 제가 바로 그
-        바리바리스타인데요..<br />
-        바리바리스타인 주제에 가방에 물건이 굴러다니는 꼴을 못봐서 항상 파우치에
-        정리를 해놓곤 합니다. <br />제가 가지고 다니는 파우치 속 필수템들과 별로
-        안궁금하신 TMI들까지 소개해드릴게요.
+    <section class="info">
+      <details>
+        <summary class="info_button">바리바리스타란?</summary>
+        <img class="info_img" src="assets/bari.jpg" alt="" />
       </details>
-    </section> -->
+    </section>
 
-    <section id="preview" class="preview" style="display: none">
+    <section id="preview" class="preview">
       <img id="preview-img" src="" alt="" />
       <table id="preview-table">
         <tbody>
@@ -44,7 +44,7 @@
             <td id="preview-name"></td>
           </tr>
           <tr>
-            <td class="item">소개</td>
+            <td class="item">TMI</td>
             <td id="preview-desc"></td>
           </tr>
         </tbody>
@@ -66,12 +66,18 @@
               <tr>
                 <td class="item">TMI</td>
                 <td>
-                  이 병아리의 진짜 이름은 '키이로이토리' 직역하면 '노란
-                  새'입니다. (이름너무대충지은거아님?)<br />
-                  그치만 생긴게 돼지병아리같아서 저는 돼병이라고 부르고
-                  있습니다.<br />
-                  일본에서 산거라 열쇠걸이도 안에 붙어있지만, 열쇠가 없는 저는
-                  그냥 파우치로 쓰고있습니다.
+                  <p>
+                    이 병아리의 진짜 이름은 '키이로이토리' 직역하면 '노란
+                    새'입니다. (이름너무대충지은거아님?)
+                  </p>
+                  <p>
+                    그치만 생긴게 돼지병아리같아서 저는 돼병이라고 부르고
+                    있습니다.
+                  </p>
+                  <p>
+                    일본에서 산거라 열쇠걸이도 안에 붙어있지만, 열쇠가 없는 저는
+                    그냥 파우치로 쓰고있습니다.
+                  </p>
                 </td>
               </tr>
             </tbody>
@@ -289,13 +295,28 @@
     </section>
     <a href="sanpo.html"> <button class="fixed-btn">map</button></a>
     <script>
-      document.querySelectorAll('details').forEach((detail) => {
-        detail.addEventListener('toggle', () => {
-          if (detail.open) {
-            // 열릴 때 h1 아래로 스크롤
-            document.querySelector('h2').scrollIntoView({ behavior: 'smooth' });
-          }
+      const preview = document.querySelector('#preview');
+      const previewImg = document.querySelector('#preview-img');
+      const previewName = document.querySelector('#preview-name');
+      const previewDesc = document.querySelector('#preview-desc');
+
+      document.querySelectorAll('.content details').forEach((detail) => {
+        const img = detail.querySelector('img');
+        const name = detail.querySelector('td:nth-child(2)');
+        const desc = detail.querySelector('tr:nth-child(2) td:nth-child(2)');
+
+        img.addEventListener('click', (e) => {
+          e.preventDefault();
+          previewImg.src = img.src;
+          previewName.innerHTML = name.innerHTML;
+          previewDesc.innerHTML = desc.innerHTML;
+          preview.style.display = 'flex';
+          preview.scrollIntoView({ behavior: 'smooth' });
         });
+      });
+
+      preview.addEventListener('click', () => {
+        preview.style.display = 'none';
       });
     </script>
   </body>

@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/sanpo.css" />
-    <title>Document</title>
+    <title>map</title>
   </head>
   <body>
     <div class="scroll-bar"></div>
 
     <h1>
       <a href="#top">
-        <span class="mtop">파우치지도</span>
+        <span class="mtop"></span>
         <span></span>
       </a>
     </h1>
@@ -20,16 +20,24 @@
       <img src="" alt="" />
     </div>
     <div id="layer">
-      <img class="" src="" alt="" />
+      <img class="layer_img" src="" alt="" />
     </div>
+
+    <fieldset id="index">
+      <ul>
+        <li><input type="checkbox" id="" checked />"1"</li>
+        <li><input type="checkbox" id="" checked />"2"</li>
+        <li><input type="checkbox" id="" checked />"3"</li>
+        <li><input type="checkbox" id="" checked />"4"</li>
+        <li><input type="checkbox" id="" checked />"5"</li>
+        <li><input type="checkbox" id="" checked />"6"</li>
+      </ul>
+    </fieldset>
 
     <fieldset id="map">
       <legend>지도</legend>
       <img src="" alt="" />
     </fieldset>
-    <ul>
-      <li><input type="checkbox" id="" checked />"햐"</li>
-    </ul>
     <script>
       window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;

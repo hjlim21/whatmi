@@ -10,7 +10,6 @@ body {
   cursor: url('../assets/smi268_page_01.png') 3 3, auto;
 }
 
-/* 메인 제목 (세로쓰기) */
 h1 {
   font-size: 30px;
   writing-mode: vertical-rl;
@@ -20,8 +19,6 @@ h1 {
   line-height: 1.5;
   margin: 50px auto 30px;
   padding: 20px;
-  border-left: 1.5px solid black;
-  border-right: 1.5px solid black;
 }
 
 /* 부제목 */
@@ -46,7 +43,7 @@ h2 {
   width: max-content;
   font-size: 13px;
   letter-spacing: 3px;
-  animation: marquee 20s linear infinite;
+  animation: marquee 30s linear infinite;
   white-space: nowrap;
 }
 
@@ -57,6 +54,23 @@ h2 {
   100% {
     transform: translateX(-50%);
   }
+}
+.info {
+  color: white;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 0px 0;
+  background-color: rgb(136, 136, 136);
+  padding: 20px;
+  font-size: 13px;
+}
+
+.info_img {
+  width: 30%;
 }
 
 /* 콘텐츠 전체 그리드 */
@@ -127,7 +141,7 @@ table {
 
 td {
   vertical-align: top; /* 위쪽 정렬 */
-  padding: 6px 10px;
+  padding: 6px;
   font-size: 13px;
   line-height: 1.6;
   word-break: keep-all;
@@ -139,7 +153,8 @@ td.item {
   width: 60px;
   font-weight: bold;
   text-align: right; /* 오른쪽 정렬해서 간격 일정하게 */
-  padding-right: 15px;
+  white-space: normal;
+  line-height: 1.6;
 }
 
 /* 버튼 */
@@ -163,4 +178,36 @@ td.item {
 .fixed-btn:hover {
   background: #555;
   transform: scale(1.1);
+}
+
+.preview {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 60px auto;
+  width: 70%;
+  text-align: center;
+}
+
+.preview img {
+  width: 60%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+.preview table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.6;
+}
+
+.preview .item {
+  width: 60px;
+  font-weight: bold;
+  text-align: right;
 }

@@ -6,7 +6,7 @@
 
 body {
   padding: 10px;
-  color: white;
+  color: black;
   cursor: url('../assets/smi268_page_01.png') 3 3, auto;
 }
 
@@ -37,13 +37,20 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 19000px;
+  height: 15000px;
   background: whitesmoke;
   z-index: -1;
 }
 
 fieldset {
   padding: 0 10px 10px 10px;
+}
+
+#index {
+  top: 16px;
+  left: 20px;
+  width: 120px;
+  height: auto;
 }
 
 #map {
