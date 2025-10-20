@@ -30,6 +30,12 @@ h1 {
   font-weight: normal;
 }
 
+h1 a {
+  font-weight: 800;
+  text-decoration: none;
+  color: inherit;
+}
+
 #bg {
   position: absolute;
   top: 0;
@@ -38,6 +44,43 @@ h1 {
   height: 15000px;
   background: whitesmoke;
   z-index: -1;
+}
+
+#layer {
+  position: relative;
+}
+
+.img_box {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.layer_img {
+  width: 300px;
+  height: auto;
+}
+
+.layer_img:hover {
+  opacity: 0.8;
+}
+
+.caption {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  padding: 4px 8px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.img_box:hover .caption {
+  opacity: 1;
 }
 
 fieldset {
