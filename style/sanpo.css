@@ -142,3 +142,27 @@ li {
   list-style: none;
   unicode-bidi: isolate;
 }
+
+.fixed-btn {
+  position: fixed;
+  top: 40px;
+  right: 25px;
+  background: black;
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixed-btn:hover {
+  background: #555;
+  transform: scale(1.1);
+}

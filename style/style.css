@@ -10,6 +10,34 @@ body {
   cursor: url('../assets/smi268_page_01.png') 3 3, auto;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  font-size: 14px;
+  color: white;
+  list-style: none;
+}
+
+#info {
+  display: none;
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  width: 700px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+#info.show {
+  display: block;
+}
+
 h1 {
   font-size: 30px;
   writing-mode: vertical-rl;
@@ -17,11 +45,11 @@ h1 {
   white-space: nowrap;
   letter-spacing: 4px;
   line-height: 1.5;
-  margin: 50px auto 30px;
+  margin: 50px auto 70px;
   padding: 20px;
+  color: black;
 }
 
-/* 부제목 */
 h2 {
   font-size: 13px;
   font-weight: normal;
@@ -30,7 +58,6 @@ h2 {
   line-height: 1.6;
 }
 
-/* 상단 흘러가는 텍스트 */
 .marquee_header {
   width: 100%;
   overflow: hidden;
@@ -43,7 +70,7 @@ h2 {
   width: max-content;
   font-size: 13px;
   letter-spacing: 3px;
-  animation: marquee 30s linear infinite;
+  /* animation: marquee 30s linear infinite; */
   white-space: nowrap;
 }
 
@@ -55,6 +82,7 @@ h2 {
     transform: translateX(-50%);
   }
 }
+
 .info {
   color: white;
   line-height: 1.5;
@@ -63,9 +91,9 @@ h2 {
   text-align: center;
   flex-wrap: wrap;
   gap: 40px;
-  margin: 0px 0;
-  background-color: rgb(136, 136, 136);
+  background-color: black;
   padding: 20px;
+  margin-bottom: 30px;
   font-size: 13px;
 }
 
@@ -83,7 +111,6 @@ h2 {
   padding: 20px;
 }
 
-/* 썸네일 이미지 */
 .thumb_img {
   width: 100%;
 }
@@ -91,35 +118,31 @@ h2 {
   transform: scale(1.03);
 }
 
-/* 각 details 기본 구조 */
 details {
   width: 100%;
   position: relative;
   transition: none;
 }
 
-/* 열렸을 때 */
 details[open] {
   grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
-  align-items: center; /* 전체 중앙 */
+  align-items: center;
   justify-content: center;
   padding: 60px 0;
   gap: 30px;
 }
 
-/* 이미지 중앙 정렬 */
 details[open] .content_button img {
   width: 80%;
   max-width: 500px;
   height: auto;
   display: block;
-  margin: 0 auto 20px auto; /* 완전 중앙 */
+  margin: 0 auto 20px auto;
   object-fit: contain;
 }
 
-/* 텍스트 블록 (표 포함) */
 details[open] .expanded {
   display: flex;
   flex-direction: column;
