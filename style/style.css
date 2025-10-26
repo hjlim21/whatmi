@@ -17,6 +17,12 @@ a {
 
 p {
   font-size: 14px;
+  color: black;
+  list-style: none;
+}
+
+.info_p {
+  font-size: 14px;
   color: white;
   list-style: none;
 }
@@ -70,7 +76,7 @@ h2 {
   width: max-content;
   font-size: 13px;
   letter-spacing: 3px;
-  /* animation: marquee 30s linear infinite; */
+  animation: marquee 30s linear infinite;
   white-space: nowrap;
 }
 
@@ -82,7 +88,6 @@ h2 {
     transform: translateX(-50%);
   }
 }
-
 .info {
   color: white;
   line-height: 1.5;
@@ -91,6 +96,7 @@ h2 {
   text-align: center;
   flex-wrap: wrap;
   gap: 40px;
+  margin: 0px 0;
   background-color: black;
   padding: 20px;
   margin-bottom: 30px;
