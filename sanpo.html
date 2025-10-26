@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="style/sanpo.css" />
     <title>map</title>
   </head>
@@ -98,6 +103,65 @@
           document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercent = (scrollTop / docHeight) * 100;
         document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+      });
+
+      window.addEventListener('load', () => {
+        const boxes = document.querySelectorAll('.img_box');
+        const layer = document.getElementById('layer');
+        const layerWidth = layer.offsetWidth;
+        const layerHeight = layer.offsetHeight;
+        const placed = []; // 배치된 이미지들의 좌표 기록
+
+        function isOverlapping(x, y, w, h) {
+          return placed.some((p) => {
+            return !(
+              (
+                x + w < p.x || // 오른쪽
+                x > p.x + p.w || // 왼쪽
+                y + h < p.y || // 아래쪽
+                y > p.y + p.h
+              ) // 위쪽
+            );
+          });
+        }
+
+        boxes.forEach((box) => {
+          const w = 320;
+          const h = 320;
+          let x,
+            y,
+            tries = 0;
+
+          do {
+            x = Math.random() * (layerWidth - w);
+            y = Math.random() * (layerHeight - h);
+            tries++;
+            if (tries > 200) break;
+          } while (isOverlapping(x, y, w, h));
+
+          box.style.left = `${x}px`;
+          box.style.top = `${y}px`;
+          placed.push({ x, y, w, h });
+        });
+
+        const pastCheck = document.getElementById('pa');
+        const futureCheck = document.getElementById('fu');
+
+        function applyFilter() {
+          boxes.forEach((box, index) => {
+            if (index < 6 && !pastCheck.checked) {
+              box.style.display = 'none';
+            } else if (index >= 6 && !futureCheck.checked) {
+              box.style.display = 'none';
+            } else {
+              box.style.display = 'block';
+            }
+          });
+        }
+
+        pastCheck.addEventListener('change', applyFilter);
+        futureCheck.addEventListener('change', applyFilter);
+        applyFilter();
       });
     </script>
   </body>
