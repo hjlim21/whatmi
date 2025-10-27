@@ -8,8 +8,9 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap"
       rel="stylesheet" />
+    <link rel="icon" href="icon/pngwing.com.png" />
     <link rel="stylesheet" href="style/sanpo.css" />
-    <title>map</title>
+    <title>time in my pouch</title>
   </head>
   <body>
     <div class="scroll-bar"></div>
@@ -38,7 +39,7 @@
       <div class="img_box">
         <img class="layer_img" src="/assetsub/susi.png" alt="" /><span
           class="caption"
-          >학원친구가 그려준 수시부적. 덕분에 대학 잘~ 왔습니다</span
+          >친구가 그려준 수시부적. 덕분에 대학 잘~ 왔습니다</span
         >
       </div>
       <div class="img_box">
@@ -56,7 +57,7 @@
       <div class="img_box">
         <img class="layer_img" src="/assetsub/mintlime.png" alt="" /><span
           class="caption"
-          >친구가 홍콩에서 사다준 이클립스 라임민트. 한국에서는 구할 수 없다고!
+          >친구가 홍콩에서 사다준 이클립스 라임민트.한국에서는 구할 수 없다고!
           맛있어서 아껴먹는 중이다.</span
         >
       </div>
@@ -70,8 +71,7 @@
       <div class="img_box">
         <img class="layer_img" src="/assetsub/munote.webp" alt="" /><span
           class="caption"
-          >너무 미디어에만 의존하는 것 같아서 아날로그로 돌아가고자 하는 마음을
-          담아..</span
+          >너무 미디어에만 의존하는 것 같아 노트를 품고 다닐까요..</span
         >
       </div>
       <div class="img_box">
@@ -83,8 +83,20 @@
       <div class="img_box">
         <img class="layer_img" src="assetsub/pspt.jpg" alt="" /><span
           class="caption"
-          >휴학생이 된 2026년에는 꼭 품속에 여권을 넣어다닐 거다. 언제든 여행 갈
-          수 있게..</span
+          >휴학생이 된 2026년에는 꼭 품속에 여권을 넣어다닐 거다.<br />
+          언제든 여행 갈 수 있게..</span
+        >
+      </div>
+      <div class="img_box">
+        <img class="layer_img" src="assetsub/hand.jpg" alt="" /><span
+          class="caption"
+          >유통기한이 지난 핸드크림과는 이별하고 새로운 친구를 장만할까요</span
+        >
+      </div>
+      <div class="img_box">
+        <img class="layer_img" src="assetsub/rol.webp" alt="" /><span
+          class="caption"
+          >슬슬 겨울이 오니 돌돌이를 넣고 다녀야겠습니다</span
         >
       </div>
     </div>
@@ -128,12 +140,13 @@
         boxes.forEach((box) => {
           const w = 320;
           const h = 320;
+          const marginX = 80; // 좌우 여백
           let x,
             y,
             tries = 0;
 
           do {
-            x = Math.random() * (layerWidth - w);
+            x = marginX + Math.random() * (layerWidth - w - marginX * 2);
             y = Math.random() * (layerHeight - h);
             tries++;
             if (tries > 200) break;
